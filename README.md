@@ -7,3 +7,4 @@ Figured this was a great way for me to track my progress!
 |       Problem      | Topic | Difficulty | Language | Notes |
 |--------------------|-------|------------|----------|-------|
 | Contains Duplicate | Array |    Easy    |  Python  | Uses hash map |
+| Is Anagram | Array |    Easy    |  Python  | Sorting string |
