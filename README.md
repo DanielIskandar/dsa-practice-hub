@@ -8,3 +8,4 @@ Figured this was a great way for me to track my progress!
 |--------------------|-------|------------|----------|-------|
 | Contains Duplicate | Array |    Easy    |  Python  | Uses hash map |
 | Is Anagram | Array |    Easy    |  Python  | Sorting string |
+| Two Sum | Array | Easy | Python | Use a hash map (num, index). Check if diff(target - num) value encountered previously |
