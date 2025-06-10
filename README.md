@@ -12,4 +12,4 @@ Figured this was a great way for me to track my progress!
 | Group Anagrams | Array | Medium | Python | Use an unordered dictionary. Make sure you return a list to avoid type errors |
 | Top K Frequent Elements | Array | Medium | Python | Hashmap, values are the occurences. |
 | Encode Decode Strings | Array | Medium | Python | Encode with [word][length]['#'] format. Decode with two pointer. Use helper function for double digit length words |
-| Longest Consecutive Sequence | Array | Medium | Python | Naive solution; WIP |
+| Longest Consecutive Sequence | Array | Medium | Python | Use hashset. Check for beginning of sequence (num - 1) and continue to increment sequence and number until number is no longer in sequence. return max between current streak and longest sequence |

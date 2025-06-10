@@ -20,22 +20,37 @@ class Solution:
             Output: 7
         """
         # Naive solution: Complexity O(N) + O(N log N)
-        if not nums:
-            return 0
-        sorted_list = sorted(nums)
-        consecutive, longest_seq = 0, 0
-        for i in range(len(nums) - 1):
-            difference = sorted_list[i + 1] - sorted_list[i]
-            if difference == 1:
-                consecutive += 1
-                if consecutive > longest_seq:
-                    longest_seq = consecutive
-            elif difference < 1:
-                continue
-            else:
-                consecutive = 0
+        # if not nums:
+        #     return 0
+        # sorted_list = sorted(nums)
+        # consecutive, longest_seq = 0, 0
+        # for i in range(len(nums) - 1):
+        #     difference = sorted_list[i + 1] - sorted_list[i]
+        #     if difference == 1:
+        #         consecutive += 1
+        #         if consecutive > longest_seq:
+        #             longest_seq = consecutive
+        #     elif difference < 1:
+        #         continue
+        #     else:
+        #         consecutive = 0
         
-        return longest_seq + 1
+        # return longest_seq + 1
+
+
+        num_set = set(nums)
+        longest = 0
+
+        for num in num_set:
+            if num - 1 not in num_set:
+                streak = 0
+                current = num
+                while current in num_set:
+                    streak += 1
+                    current += 1
+                longest = max(longest, streak)
+        
+        return longest
     
 class Test_Solution(unittest.TestCase):
     def testRegular(self):
