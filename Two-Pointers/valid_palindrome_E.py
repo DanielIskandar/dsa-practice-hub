@@ -20,30 +20,7 @@ class Solution:
                          ^
         """
 
-        # left, right = 0, len(s) - 1
-        # if len(s) < 2:
-        #     return True
-        # while left < right:
-        #     while s[left].isalnum() == False:
-        #         if left < len(s) - 1:
-        #             left += 1
-        #         else:
-        #             return True
-        #     while s[right].isalnum() == False:
-        #         if right > 0:
-        #             right -= 1
-        #         else:
-        #             return True
-        #     if s[left].lower() != s[right].lower():
-        #         return False
-        #     else:
-        #         left += 1
-        #         right -= 1
-        # return True
-
         left, right = 0, len(s) - 1
-        if len(s) < 2:
-            return True
         
         while left < right:
             while left < right and not s[left].isalnum():
