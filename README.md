@@ -15,3 +15,4 @@ Figured this was a great way for me to track my progress!
 | Longest Consecutive Sequence | Array | Medium | Python | Use hashset. Check for beginning of sequence (num - 1) and continue to increment sequence and number until number is no longer in sequence. return max between current streak and longest sequence |
 | Valid Palindrome | Two-Pointer | Easy | Python | Left and Right pointers, check with alnum and keep moving if not alnum. Don't forget to convert to lower case. |
 | Two Sum II | Two-Pointer | Medium | Python | Left and Right pointers. Check sum against target and shift left or right accordingly. |
+| 3Sum | Two-Pointer | Medium | Python | WIP, currently buggy solution | 
