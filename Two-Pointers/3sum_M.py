@@ -22,41 +22,36 @@ class Solution:
             Input: nums = [0,0,0]
             Output: [[0,0,0]]
 
-        Naive:
-           \/
-        [-1,0,1,2,-1,-4]
-         ^            
-              ^
-        total: -1 + 0 + 1 = 0
+        2 (3) pointer solution:
 
-        output: [-1, 2, -1], [-1, 0, 1]
+        [-4, -1, -1, 0, 1, 2]
+              ^            
+                           ^
+        total: -1 + 0 + 1  = 0
+
+        output: [-1, 0, 1], [-1, 0, 1]
         
         """
-        output = []
-        left, right = 0, len(nums) - 1
+        res = []
+        nums.sort()
 
-        Solution.input_validation(self, nums)
+        for i, num in enumerate(nums):
+            if i > 0 and num == nums[i - 1]:
+                continue
 
-        while left < right:
-            middle = left + 1 # Consider this might be a problem if the size of the array is 3 because you would just be checking right twice
-            while middle < right:
-                total_sum = nums[left] + nums[middle] + nums[right]
-                if total_sum == 0 and [nums[left], nums[middle], nums[right]] not in output:
-                    output.append([nums[left], nums[middle], nums[right]])
-                    middle += 1 
+            left, right = i + 1, len(nums) - 1
+            while left < right:
+                sum = num + nums[left] + nums[right]
+                if sum < 0:
+                    left += 1
+                elif sum > 0:
+                    right -= 1
                 else:
-                    middle += 1
-            right -= 1
-        return output
-
-    def input_validation(self, nums: List[int]) -> List[List[int]]:
-        """
-        Constraints:
-            3 <= nums.length <= 1000
-            -10^5 <= nums[i] <= 10^5
-        """
-        if len(nums) < 3 or len(nums) > 1000:
-            raise ValueError("Length of input list must be between 3 and 1000 (inclusive)")
+                    res.append([num, nums[left], nums[right]])
+                    l += 1
+                    while nums[left] == nums[left - 1] and left < right:
+                        left += 1
+            return res
 
 class testSolution(unittest.TestCase):
     def test_regular(self):
@@ -73,15 +68,19 @@ class testSolution(unittest.TestCase):
         output2 = [[0,0,0]]
         self.assertEqual(Solution.threeSum(self, nums2), output2)
     
-    def test_invalid_input(self):
-        nums = [0,1]
-        with self.assertRaises(ValueError):
-            Solution.threeSum(self, nums)
+    # def test_invalid_input(self):
+    #     nums = [0,1]
+    #     with self.assertRaises(ValueError):
+    #         Solution.threeSum(self, nums)
 
-    def test_failed_test(self):
+    def test_duplicates(self):
         nums = [0,0,0,0]
         output = [[0,0,0]]
         self.assertEqual(Solution.threeSum(self, nums), output)
+
+        nums2 = [-1,0,1,0]
+        output2 = [[-1,1,0]]
+        self.assertEqual(Solution.threeSum(self, nums2), output2)
 
 
 if "__main__" == __name__:

@@ -1,0 +1,12 @@
+/Users/danieliskandar/Desktop/dsa-practice-hub/dsa-practice-hub/csharp/DSA/bin/Debug/net10.0/DSA.deps.json
+/Users/danieliskandar/Desktop/dsa-practice-hub/dsa-practice-hub/csharp/DSA/bin/Debug/net10.0/DSA.dll
+/Users/danieliskandar/Desktop/dsa-practice-hub/dsa-practice-hub/csharp/DSA/bin/Debug/net10.0/DSA.pdb
+/Users/danieliskandar/Desktop/dsa-practice-hub/dsa-practice-hub/csharp/DSA/obj/Debug/net10.0/DSA.GeneratedMSBuildEditorConfig.editorconfig
+/Users/danieliskandar/Desktop/dsa-practice-hub/dsa-practice-hub/csharp/DSA/obj/Debug/net10.0/DSA.AssemblyInfoInputs.cache
+/Users/danieliskandar/Desktop/dsa-practice-hub/dsa-practice-hub/csharp/DSA/obj/Debug/net10.0/DSA.AssemblyInfo.cs
+/Users/danieliskandar/Desktop/dsa-practice-hub/dsa-practice-hub/csharp/DSA/obj/Debug/net10.0/DSA.csproj.CoreCompileInputs.cache
+/Users/danieliskandar/Desktop/dsa-practice-hub/dsa-practice-hub/csharp/DSA/obj/Debug/net10.0/DSA.sourcelink.json
+/Users/danieliskandar/Desktop/dsa-practice-hub/dsa-practice-hub/csharp/DSA/obj/Debug/net10.0/DSA.dll
+/Users/danieliskandar/Desktop/dsa-practice-hub/dsa-practice-hub/csharp/DSA/obj/Debug/net10.0/refint/DSA.dll
+/Users/danieliskandar/Desktop/dsa-practice-hub/dsa-practice-hub/csharp/DSA/obj/Debug/net10.0/DSA.pdb
+/Users/danieliskandar/Desktop/dsa-practice-hub/dsa-practice-hub/csharp/DSA/obj/Debug/net10.0/ref/DSA.dll
